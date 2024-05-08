@@ -1,0 +1,47 @@
+root: true
+extends:
+    - eslint:recommended
+    - plugin:@typescript-eslint/recommended
+    - plugin:vue/recommended
+    - plugin:prettier/recommended
+    - ./.eslintrc-auto-import.json
+parser: "@typescript-eslint/parser"
+plugins:
+    - "@typescript-eslint"
+    - eslint-plugin-tsdoc
+    - perfectionist
+ignorePatterns:
+    - "*.cjs"
+env:
+    browser: true
+    node: true
+overrides:
+    - files:
+          - "*.vue"
+      parser: vue-eslint-parser
+      parserOptions:
+          parser: "@typescript-eslint/parser"
+rules:
+    camelcase: off
+    tsdoc/syntax: warn
+    vue/multi-word-component-names: off
+    vue/no-multiple-template-root: off
+    vue/no-v-model-argument: off
+    perfectionist/sort-imports:
+        - error
+        - type: natural
+          order: asc
+          newlines-between: always
+          groups:
+              - builtin
+              - external
+              - internal
+              - type
+          internal-pattern:
+              - "@/**"
+              - "~/**"
+              - "#composables/**"
+              - "#components/**"
+              - "#layouts/**"
+              - "#assets/**"
+              - "#i18n/**"

@@ -1,0 +1,26 @@
+.DS_Store
+node_modules
+/build
+/.nuxt
+/.vercel
+/.output
+/package
+.env
+.env.*
+!.env.example
+
+# Ignore files for PNPM, NPM and YARN
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+i18n/*
+./i18n
+
+# Build artifacts
+dist/**
+
+# JS files at the root of the project
+*.js
+*.cjs
+*.mjs
