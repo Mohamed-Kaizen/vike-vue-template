@@ -35,7 +35,7 @@
 		"@unpic/vue": "^0.0.50",
 		"@vite-plugin-vercel/vike": "^6.0.1",
 		"@vueuse/core": "^10.9.0",
-		"eslint": "^8.57.0",
+		"eslint": "^9.26.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-perfectionist": "^2.10.0",
 		"eslint-plugin-prettier": "^5.1.3",
